@@ -5,8 +5,8 @@
 
 var regID = "Bot regID is: 10x24x19xAA";
 var statusFlag = 0;
-const captureCompare = [/^\Nico$/, /^\nico$/, /^\overlord$/, /^\Overlord$/, /^\\reg$/, /^\\status$/, /^\@Eric$/, /^\Prepare for trouble$/, /^\Josh$/, /^\Coolest$/, /^\coolest$/, /^\Happy New Year!$/, /^\Raphtalia$/];
-const responseGrid = ["I like rocks XD", "I like rocks XD", "Ainz-Sama!", "Ainz-Sama!", regID, "status", "@God_damn", "And make it double", "Josh-Sama!", "God-Damn-Coolest-O", "God-Damn-Coolest-O", "Reminder: Happy God Damn New Year!", "NAOFUMI-SAMA!"];
+const captureCompare = [/^\Nico$/, /^\nico$/, /^\roll d20$/, /^\Overlord$/, /^\\reg$/, /^\\status$/, /^\@Eric$/, /^\Prepare for trouble$/, /^\Josh$/, /^\Coolest$/, /^\coolest$/, /^\Happy New Year!$/, /^\Raphtalia$/];
+const responseGrid = ["I like rocks XD", "I like rocks XD", "roll", "Ainz-Sama!", regID, "status", "@God_damn", "And make it double", "Josh-Sama!", "God-Damn-Coolest-O", "God-Damn-Coolest-O", "Reminder: Happy God Damn New Year!", "NAOFUMI-SAMA!"];
 
 
 /***************************/
@@ -71,6 +71,11 @@ function postMessage(input, index) {
     
     if (statusFlag == 0) { botResponse = "Status: CRITICALLY-NORMAL, eEt mOr cHicKn"; }
     else { botResponse = "Status: BAD"; }
+  }
+  
+  if (input == "roll") {
+   
+    botResponse = Math.floor(Math.random() * 20) + 1;
   }
 
   options = {
