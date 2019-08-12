@@ -75,7 +75,8 @@ function postMessage(input, index) {
   
   if (input == "roll") {
    
-    botResponse = Math.floor(Math.random() * 20) + 1;
+    rollnumber = Math.floor(Math.random() * 20) + 1;
+    botResponse = rollnumber.toString();
   }
 
   options = {
