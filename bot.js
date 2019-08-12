@@ -73,12 +73,12 @@ function postMessage(input, index) {
     else { botResponse = "Status: BAD"; }
   }
   
-  if (botResponse == "roll") {
+//   if (input == "roll") {
    
-    rollnumber = Math.floor(Math.random() * 20) + 1;
-    botResponse = rollnumber.toString();
-    botResponse = "TEST";
-  }
+//     rollnumber = Math.floor(Math.random() * 20) + 1;
+//     botResponse = rollnumber.toString();
+//     botResponse = "TEST";
+//   }
 
   options = {
     hostname: 'api.groupme.com',
