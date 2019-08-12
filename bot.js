@@ -5,7 +5,7 @@
 
 var regID = "Bot regID is: 10x24x19xAA";
 var statusFlag = 0;
-const captureCompare = [/^\Nico$/, /^\nico$/, /^\roll$/, /^\Overlord$/, /^\\reg$/, /^\\status$/, /^\@Eric$/, /^\Prepare for trouble$/, /^\Josh$/, /^\Coolest$/, /^\coolest$/, /^\Happy New Year!$/, /^\Raphtalia$/];
+const captureCompare = [/^\Nico$/, /^\nico$/, /^\\roll d20$/, /^\Overlord$/, /^\\reg$/, /^\\status$/, /^\@Eric$/, /^\Prepare for trouble$/, /^\Josh$/, /^\Coolest$/, /^\coolest$/, /^\Happy New Year!$/, /^\Raphtalia$/];
 const responseGrid = ["I like rocks XD", "I like rocks XD", "roll", "Ainz-Sama!", regID, "status", "@God_damn", "And make it double", "Josh-Sama!", "God-Damn-Coolest-O", "God-Damn-Coolest-O", "Reminder: Happy God Damn New Year!", "NAOFUMI-SAMA!"];
 
 
@@ -73,12 +73,11 @@ function postMessage(input, index) {
     else { botResponse = "Status: BAD"; }
   }
   
-//   if (input == "roll") {
+  if (input == "roll") {
    
-//     rollnumber = Math.floor(Math.random() * 20) + 1;
-//     botResponse = rollnumber.toString();
-//     botResponse = "TEST";
-//   }
+    rollnumber = Math.floor(Math.random() * 20) + 1;
+    botResponse = rollnumber.toString();
+  }
 
   options = {
     hostname: 'api.groupme.com',
