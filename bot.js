@@ -5,7 +5,7 @@
 
 var regID = "Bot regID is: 10x24x19xAA";
 var statusFlag = 0;
-car hp = 0;
+var hp = 0;
 const captureCompare = [/^\Nico$/, /^\Eat a rock$/, /^\\roll d20$/, /^\/roll d20$/, /^\\reg$/, /^\\status$/, /^\hp$/, /^\Prepare for trouble$/, /^\Josh$/, /^\Coolest$/, /^\coolest$/, /^\Happy New Year!$/, /^\Raphtalia$/];
 const responseGrid = ["I like rocks XD", "eat", "roll", "roll", regID, "status", "hp", "And make it double", "Josh-Sama!", "God-Damn-Coolest-O", "God-Damn-Coolest-O", "Reminder: Happy God Damn New Year!", "NAOFUMI-SAMA!"];
 
