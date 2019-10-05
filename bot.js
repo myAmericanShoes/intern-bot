@@ -95,6 +95,9 @@ function postMessage(input, index) {
     rollnumber = Math.floor(Math.random() * 20) + 1;
     botResponse = "You attack with your great sword, Nico takes " + rollnumber.toString() + " damage";
     hp = hp - rollnumber;
+    if (hp < 0) {
+      hp = 0;
+    }
   }
 
   options = {
